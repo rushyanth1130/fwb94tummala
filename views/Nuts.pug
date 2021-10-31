@@ -1,11 +1,11 @@
 extends layout
 
 block content
-  div(class="container-fluid")
+ div(class="container-fluid")
   h1= title
-  -
+  -var nutDesc=[{nutName :"Almond",Price:17.65,Quantity:2},{nutName:"Pistachio",Price:19.20,Quantity:10},{nutName:"Hazelnut",Price:18.90,Quantity:12}] 
   div(class="row")
-    each nut in nutsDes
-      div(class="col-sm-2") #{}
-      div(class="col-sm-2") #{}
-      div(class="col-sm-2") #{}
+    each nut in nutDesc
+        div(class = "col-sm-2") #{nut.nutName} 
+        div(class = "col-sm-2") #{nut.Price}
+        div(class = "col-sm-2") #{nut.Quantity}
